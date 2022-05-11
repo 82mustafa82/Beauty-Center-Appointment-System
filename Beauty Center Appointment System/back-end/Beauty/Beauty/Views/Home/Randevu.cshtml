@@ -1,0 +1,84 @@
+﻿
+@model Beauty.Data.Uye
+
+@section Styles {
+<style>
+    #login-li {
+        display: none;
+    }
+</style>
+}
+
+<!--Service-->
+<section id="service">
+    <div class="container">
+        <h2>Randevu</h2>
+        <h6>Hızlıca Randevunüzü oluşturun</h6>
+        <div class="service_wrapper">
+
+            <form action="#" method="post" id="randevu-form">
+                <input type="hidden" id="userId" value="@Model.Uid" />
+                <div class="elem-group">
+                    <label for="name">Sayın</label>
+                    <label for="name"><b>@Model.Ad &nbsp; @Model.Soyad</b></label>
+
+                </div>
+                <div class="elem-group">
+                    <label for="email">Mailiniz</label>
+                    <label for="email">@Model.Email</label>
+                </div>
+                <div class="elem-group">
+                    <label for="phone">Cep Numaranız</label>
+                    <label for="email">@Model.Telefon</label>
+                </div>
+                <hr>
+                <div class="elem-group">
+                    <label for="ddlHizmet">Aradığınız hizmeti giriniz </label>
+                    <select id="ddlHizmet" name="room_preference" required>
+                    </select>
+                </div>
+
+                <div class="elem-group">
+                    <label for="ddlCalisan">Operasyon Yetkilisi giriniz </label>
+                    <select id="ddlCalisan" name="room_preference" required>
+                    </select>
+                </div>
+
+                <div class="elem-group inlined">
+                    <label for="checkin-date">Randevu Tarihi</label>
+                    <input type="date" id="checkin-date" name="checkin" required>
+                </div>
+                <div>
+                    <button onclick="SaveRendesvous()" class="randevu-button" type="button">Randevu Al</button>
+                </div>
+
+            </form>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+<!--Service-->
+
+
+<section id="randevu">
+    <div class="container">
+        <hr>
+        <h2>Servislerimiz</h2>
+        <h6>Hızlıca Randevunüzü oluşturun</h6>
+
+    </div>
+</section>
+
+
+<div id="project_container">
+    <div class="clear"></div>
+    <div id="project_data"></div>
+</div>
+
+<!-- Portfolio -->

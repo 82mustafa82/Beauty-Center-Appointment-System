@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model Beauty.Models.CountView 
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card bg-primary">
+                <div class="card-body widget p-0">
+                    <div class="widget-data">
+                        <span> Müşterilerimiz </span>
+                        <span class="content"> @Model.Musteri </span>
+                    </div>
+                    <div class="widget-icon">
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning">
+                <div class="card-body widget p-0">
+                    <div class="widget-data">
+                        <span> Çalışanlarımız </span>
+                        <span class="content"> @Model.Calisan </span>
+                    </div>
+                    <div class="widget-icon">
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card bg-purple">
+                <div class="card-body widget p-0">
+                    <div class="widget-data">
+                        <span> Randevularımız </span>
+                        <span class="content"> @Model.Randevu </span>
+                    </div>
+                    <div class="widget-icon">
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-danger">
+                <div class="card-body widget p-0">
+                    <div class="widget-data">
+                        <span> Hizmetler </span>
+                        <span class="content"> @Model.Hizmet </span>
+                    </div>
+                    <div class="widget-icon">
+                        <span>
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

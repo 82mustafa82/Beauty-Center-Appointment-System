@@ -1,0 +1,46 @@
+﻿@model Beauty.Data.Randevu
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Randevu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CidNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CidNavigation.Cid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HnoNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HnoNavigation.Hno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UidNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UidNavigation.Uid)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

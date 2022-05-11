@@ -1,0 +1,43 @@
+﻿@model Beauty.Data.Randevu
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Randevu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CidNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CidNavigation.Cid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HnoNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HnoNavigation.Hno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UidNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UidNavigation.Uid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
